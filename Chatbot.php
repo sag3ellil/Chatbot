@@ -122,7 +122,7 @@ if(preg_match('/(by|goodbye|byby|a\+)(.*?)/', $message))
 	sendTextMessage("see u soon! ;)  ");
 }
 
-$link=mysqli_connect("localhost", "root", "","magazin_bot");
+/*$link=mysqli_connect("localhost", "root", "","magazin_bot");
 
 
 
@@ -132,7 +132,7 @@ if(preg_match('/^[1-5]$/', $message))
 	$getR = mysqli_fetch_assoc($reponse1);
 	sendTextMessage("A propos de cette article , il ne reste que ".$getR['stock']."pieces, le prix est ".$getR['prix']."dinars");
 		
-}
+}*/
 
 if(preg_match('/(ok|att|[a-zA-Z0-9])/', $message))
 {$senderActionResponse='{
