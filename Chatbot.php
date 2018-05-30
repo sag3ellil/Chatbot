@@ -13,6 +13,7 @@
 
 
 $input = json_decode(file_get_contents('php://input'), true);
+/*
 // Get the Senders Graph ID
 $sender = $input['entry'][0]['messaging'][0]['sender']['id'];
 
@@ -84,9 +85,9 @@ sendRandResponse($response);
 
 
 //
-/*curl -X POST -H "Content-Type: application/json" -d '{
-  "get_started": {"payload": "Get Started"}
-}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAADBV1abaCkBAKVdujbP8amT9fQCXRjZAvC3ZBZA4y5ZBkXmexQfLZAo36ZACxaZANybJNHxnZBL9PKSlBQDgHkZAvZCWNvy3F6a0U4MfK5XLN6aAZCZAKOO5ZCrZCsii4LSifVZBkZAX79j2P4HdaWMZB14Uzcd4JeNat1OsbejML01OYwIW2AZDZD"   */
+//curl -X POST -H "Content-Type: application/json" -d '{
+//  "get_started": {"payload": "Get Started"}
+//}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAADBV1abaCkBAKVdujbP8amT9fQCXRjZAvC3ZBZA4y5ZBkXmexQfLZAo36ZACxaZANybJNHxnZBL9PKSlBQDgHkZAvZCWNvy3F6a0U4MfK5XLN6aAZCZAKOO5ZCrZCsii4LSifVZBkZAX79j2P4HdaWMZB14Uzcd4JeNat1OsbejML01OYwIW2AZDZD"  
 //
 //{ "get_started":{ "payload":"GET_STARTED_PAYLOAD" } }
 
@@ -122,17 +123,17 @@ if(preg_match('/(by|goodbye|byby|a\+)(.*?)/', $message))
 	sendTextMessage("see u soon! ;)  ");
 }
 
-/*$link=mysqli_connect("localhost", "root", "","magazin_bot");
+//$link=mysqli_connect("localhost", "root", "","magazin_bot");
 
 
 
-if(preg_match('/^[1-5]$/', $message))
-{
-	$reponse1=mysqli_query($link,"SELECT * FROM articles where id_article='$message' ")or die(mysqli_error($link));
-	$getR = mysqli_fetch_assoc($reponse1);
-	sendTextMessage("A propos de cette article , il ne reste que ".$getR['stock']."pieces, le prix est ".$getR['prix']."dinars");
+//if(preg_match('/^[1-5]$/', $message))
+//{
+//	$reponse1=mysqli_query($link,"SELECT * FROM articles where id_article='$message' ")or die(mysqli_error($link));
+//	$getR = mysqli_fetch_assoc($reponse1);
+//	sendTextMessage("A propos de cette article , il ne reste que ".$getR['stock']."pieces, le prix est ".$getR['prix']."dinars");
 		
-}*/
+//}
 
 if(preg_match('/(ok|att|[a-zA-Z0-9])/', $message))
 {$senderActionResponse='{
@@ -360,6 +361,6 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 			  curl_close($ch);
 			 // }
 
-}
+}*/
 ?>
 
